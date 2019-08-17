@@ -7,11 +7,11 @@ const port = config.port;
 const host = config.hostName;
 const express = require('express');
 const app = express();
-var errorHandler = require('./server/middleware/errorHandler');
 require('./server/middleware/appMiddleware')(app);
 const routes = require('./server/api/v1/api');
 const swaggerJsdoc = require('swagger-jsdoc');
-
+const errorHandler = require('./server/middleware/errorHandlingMiddleware');
+//Swagger options set up
 const options = {
   swaggerDefinition: {
     // Like the one described here: https://swagger.io/specification/#infoObject
@@ -32,7 +32,8 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 app.use('/api/v1', routes);
 
-//If using https setup is different
+//If using https setup is different leaving this commented out because you need a certificate and stuff
+//for it it work and it's a pain to deal with in dev environment
 // if(config.useHttps)
 // {
 //     var options = {
@@ -47,10 +48,14 @@ app.use('/api/v1', routes);
 //     });
 // }
 // else{
-app.listen(port, function () {
-        console.log("Listening on port " + port);
-    });
+  // app.listen(port, function () {
+  //       console.log("Listening on port " + port);
+  //   });
 //}
+app.listen(port, host, function () {
+  console.log("Listening on port " + port);
+});
+
 app.use(errorHandler);
 
 

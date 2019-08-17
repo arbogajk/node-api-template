@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const api = require('./api/v1/api');
-const err = require('./middleware/errorHandler')
+const err = require('./middleware/errorHandlingMiddleware');
 
 require('./middleware/appMiddleware')(app);
 
