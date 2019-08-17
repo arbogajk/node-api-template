@@ -10,7 +10,7 @@ const app = express();
 require('./server/middleware/appMiddleware')(app);
 const routes = require('./server/api/v1/api');
 const swaggerJsdoc = require('swagger-jsdoc');
-const errorHandler = require('./server/middleware/errorHandlingMiddleware');
+const errorHandler = require('./server/middleware/errorHandlerMiddleware');
 //Swagger options set up
 const options = {
   swaggerDefinition: {

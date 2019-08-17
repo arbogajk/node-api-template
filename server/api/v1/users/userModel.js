@@ -23,8 +23,12 @@ const UserSchema = new Schema({
     lastname: {type: String},
     subscriptions: [{type: Schema.Types.ObjectId, ref:'subscription'}],
 });
-// UserSchema.methods.toJSON = () => {
-//     delete this.password;
-//     return this;
-// }
+
+UserSchema.options.toJSON = UserSchema.options.toJSON || {};
+//removes sensitive fields before sending object back
+UserSchema.options.toJSON.transform = (doc, ret, options) => {
+    delete ret.password;
+    return ret;
+}
+
 module.exports = mongoose.model('user', UserSchema);
