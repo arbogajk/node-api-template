@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e64a5061-1c40-47cf-a53d-d1fa35a0bd21",
+		"_postman_id": "61e3e90f-868f-4e16-b666-a2625826cf73",
 		"name": "base-api-template",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -25,12 +25,11 @@
 							"raw": "{\n\t\"username\": \"testuser\",\n\t\"email\": \"test@gmail.com\",\n\t\"password\":\"password123!\",\n\t\"firstname\": \"test\",\n\t\"lastname\": \"SQA\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/auth/register",
+							"raw": "http://{{hostname}}/api/v1/auth/register",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{hostname}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -68,12 +67,11 @@
 							"raw": "{\n\t\"username\": \"{{username}}\",\n\t\"password\":\"{{password}}\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/auth/login",
+							"raw": "http://{{hostname}}/api/v1/auth/login",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{hostname}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -100,12 +98,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/v1/auth/logout",
+							"raw": "http://l{{hostname}}/api/v1/auth/logout",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"l{{hostname}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
@@ -132,12 +129,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/v1/auth/currentIdentity",
+							"raw": "http://{{hostname}}/api/v1/auth/currentIdentity",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{hostname}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"v1",
