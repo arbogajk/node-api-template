@@ -1,0 +1,56 @@
+{
+	"requireCurlyBraces": [
+		"if",
+		"else",
+		"for",
+		"while",
+		"do",
+		"try",
+		"catch"
+	],
+	"requireSpaceAfterKeywords": [
+		"if",
+		"else",
+		"for",
+		"while",
+		"do",
+		"switch",
+		"case",
+		"try",
+		"catch",
+		"typeof"
+	],
+	"requireSpacesInFunctionExpression": false,
+	"requireSpacesInForStatement": true,
+	"requireSpaceBeforeObjectValues": true,
+	"requireSpaceBetweenArguments": true,
+	"disallowKeywords": ["with"],
+	"requireLineFeedAtFileEnd": false,
+	"validateLineBreaks": "LF",
+	"validateIndentation": "\t",
+	"requireSpaceAfterPrefixUnaryOperators": false,
+	"requireSpaceBeforePostfixUnaryOperators": ["++", "--"],
+	"requireSpaceBeforeBinaryOperators": false,
+	"requireSpaceAfterBinaryOperators": false,
+	"disallowSpaceBeforeBinaryOperators": [","],
+	"requireSpacesInConditionalExpression": {
+		"afterTest": true,
+		"beforeConsequent": true,
+		"beforeAlternate": true
+	},
+	"disallowSpacesInConditionalExpression": {
+		"afterConsequent": true
+	},
+	"disallowTrailingWhitespace": true,
+	"disallowNewlineBeforeBlockStatements": true,
+	"requireSpaceBeforeBlockStatements": false,
+	"requirePaddingNewlinesInBlocks": false,
+	"requireSpacesInsideParentheses": false,
+	"requireParenthesesAroundIIFE": true,
+	"requireMultipleVarDecl": {
+		"allExcept": "['require']"
+	},
+	"requireCapitalizedConstructors": true,
+	"safeContextKeyword": ["self"],
+	"requireDotNotation": false
+}
