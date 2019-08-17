@@ -1,5 +1,4 @@
-const DB = require('meallab.db');
-const Subscription = DB.models.subscriptionModel;
+const Subscription = require('./subscriptionModel');
 var _ = require('lodash');
 
 exports.params = function(req, res, next, id){

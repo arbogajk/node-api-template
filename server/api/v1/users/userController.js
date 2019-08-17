@@ -1,5 +1,4 @@
-const DB = require('meallab.db');
-const User = DB.models.userModel;
+const User = require('./userModel');
 var _ = require('lodash');
 
 exports.params = function(req, res, next, id){

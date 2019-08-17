@@ -1,7 +1,6 @@
 var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
-const DB = require('meallab.db');
-var User = DB.models.userModel;
+var User = require('../users/userModel');
 var config = require('../../../../configs/config');
 
 module.exports = function(req, res, next) {
